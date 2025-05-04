@@ -1,0 +1,26 @@
+<resources>
+
+
+        <string name="app_name">Voice Echo</string>
+
+        <!-- Button prompt -->
+        <string name="i_am_ready">I am ready</string>
+
+        <!-- Speech prompt shown above mic icon -->
+        <string name="speak_now">Speak now</string>
+
+        <!-- Error message in the TextView -->
+        <string name="error_format">Error: %1$d</string>
+
+        <!-- Permission‐denied toast -->
+        <string name="audio_permission_required">Audio permission required to use voice</string>
+
+        <!-- TTS init failure toast -->
+        <string name="tts_init_failed">Text‑to‑speech initialization failed</string>
+
+        <string name="ready_for_instructions">Ready for Instructions</string>
+
+        <string name="you_asked">You asked</string>
+
+        <string name="say_over_prompt">Over</string>
+</resources>

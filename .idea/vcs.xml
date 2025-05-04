@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/lavish" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pocketsphinx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pocketsphinx-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pocketsphinx-android-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sphinxbase" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Mic button -->
+    <ImageButton
+        android:id="@+id/btnMic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/purple_200"
+        android:contentDescription="Speak"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <!-- Shows recognized speech -->
+    <TextView
+        android:id="@+id/txtSpoken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Say something…"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+</LinearLayout>

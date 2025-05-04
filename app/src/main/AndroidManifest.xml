@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bramestorm.voiceecho">
+
+    <uses-sdk android:minSdkVersion="29"
+        android:targetSdkVersion="34"/>
+
+    <!-- Required for any foreground service -->
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <!-- Your microphone capture -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+
+
+    <!-- Android 13+: tag your FGS that uses the mic -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme" >
+
+        <!-- …other components… -->
+
+
+        <service
+            android:name="com.bramestorm.voiceecho.VoiceControlService"
+            android:exported="false"
+            android:foregroundServiceType="microphone">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+
+
+        <activity
+            android:name="com.bramestorm.voiceecho.MainActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <!-- This pair tells Android: “Show my icon, launch MainActivity.” -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.bramestorm.voiceecho.VoiceSetupActivity" />
+
+    </application>
+</manifest>
